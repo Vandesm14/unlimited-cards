@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Unlimited Cards</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="app">
+		<div class="grid">
+			<div class="sidebar"></div>
+			<div class="topbar">
+				<div class="opponent-hand"></div>
+			</div>
+			<div class="gameArea"></div>
+			<div class="bottombar">
+				<div class="player-hand"></div>
+				<div class="player-navigation">
+					<button class="arrow-btn left" id="prevPlayer">&lt;</button>
+					<button class="arrow-btn right" id="nextPlayer">&gt;</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<template id="smallCardTemplate">
+		<div class="card small {{color}}" data-suit="{{suit}}">
+			<p class="card-number">{{number}}</p>
+		</div>
+	</template>
+	<template id="cardTemplate">
+		<div class="card {{color}}" data-suit="{{suit}}" data-facedown="{{faceDown}}">
+			<p class="card-number">{{number}}</p>
+		</div>
+	</template>
+	<template id="pileTemplate">
+		<div class="pile {{mainType}}" data-type="{{type}}" data-name="{{name}}"></div>
+	</template>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>
